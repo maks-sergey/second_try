@@ -37,3 +37,45 @@ console.log(personalMovieDB);
 
 
 
+function sayHello(userName) {
+    let resultPhrase = 'Привет, ';
+    resultPhrase += `${userName}`;
+   return resultPhrase;
+}
+
+console.log(sayHello('John'));
+
+
+function returnNeighboringNumbers(midNumber) {
+    let resultArray = [];
+    for (let i = 0; i <=2; i++) {
+        resultArray[i] = midNumber -1 + i;
+    }
+    return resultArray;
+}
+
+console.log(returnNeighboringNumbers(6));
+
+
+function getMathResult(baseNumber, progressNumber) {
+    let resultStr = ''; 
+    if (typeof(progressNumber || 'number')) {
+        resultStr = `${baseNumber}`;
+        return resultStr;
+    }
+
+    for (let i = 1; i <= progressNumber; i++) {
+        let resNumber = baseNumber * i;
+        if (i === progressNumber) {
+            resultStr += `${resNumber}`;
+        } else {
+            resultStr += `${resNumber}---`;
+        }
+        
+        
+    }
+    
+    return resultStr;
+}
+
+console.log(getMathResult(3,10));
