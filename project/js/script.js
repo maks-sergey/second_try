@@ -51,3 +51,39 @@ movieDB.movies.forEach((film, i) => {
 });
 
 
+
+
+
+function factorial(n) {
+    
+    if (n <= 0 || n == 1) {
+        return 1;
+    }  
+    
+    if (n % 1 != 0 || typeof(n) != 'number') {
+        return "error";
+    }
+    
+
+    
+    let i = n - 1;
+    
+    if (i == 1) {
+        return n;
+    } else {
+        
+        return n * factorial(i);
+    }
+
+}
+console.log(factorial(6));
+
+function factorial(n) {
+    let resFact = n;
+    for ( let i = 1; i < n; i++ ) {
+        resFact *= n - i;
+    }
+    console.log(resFact);
+}
+
+factorial(5);
